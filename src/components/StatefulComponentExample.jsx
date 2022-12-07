@@ -9,7 +9,15 @@ class StatefulComponentExample extends React.Component {
   }
 
   increment = () => {
-    this.setState(state: (prevState) => {return{counter: prevState.counter + 1}});
+    this.setState(prevState => {
+      return { counter: prevState.counter + 1 };
+    });
+  };
+
+  decrement = () => {
+    this.setState(prevState => {
+      return { counter: prevState.counter - 1 };
+    });
   };
 
   render() {
